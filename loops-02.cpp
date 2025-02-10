@@ -5,8 +5,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 using std::rand;
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 int main() {
     srand(time(NULL));
     int n1 = 0, n2 = 0, n3 = 0;
