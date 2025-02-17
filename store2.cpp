@@ -11,7 +11,7 @@ int main(){
 	
 	char start;
 	int quantity, fruitOption;
-	double subTotal, totalMoney = 0;
+	double subTotal, tax, total, totalMoney = 0;
 	
 	cout << "Welcome to the Store" << endl;
 	cout << "Press y to start " << endl;
@@ -39,11 +39,15 @@ int main(){
 				cout << fruitOption << " is invalid" << endl;
 			}
 		}while (fruitOption != 0);
+		tax = subTotal * 0.05;
+		total = subTotal + tax;
 		cout << "Sub Total is " << setw(10) << fixed << setprecision(2) << subTotal << endl;
-		cout << "Tax is       " << setw(10) << fixed << setprecision(2) << subTotal * 0.05 << endl;
-		cout << "Total is     " << setw(10) << fixed << setprecision(2) << subTotal * 1.05 << endl;
-		totalMoney += subTotal * 1.05;
+		cout << "Tax is       " << setw(10) << fixed << setprecision(2) << tax << endl;
+		cout << "Total is     " << setw(10) << fixed << setprecision(2) << total << endl;
+		totalMoney += total;
+		cout << "Continue selling (y to continue): ";
+		cin >> start;
 	}
-	cout << "You should have in your money box: " << totalMoney << endl;
+	cout << "You should have in your money box: " << fixed << setprecision(2) << totalMoney << endl;
 	return 0;
 }
