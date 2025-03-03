@@ -30,19 +30,19 @@ int main(){
 
 	cout << json.str() << endl;
 
-/*
+
 	string csv = "john,rambo,80,300";
 	stringstream csvStream(csv);
 	string data;
-	while (getline(data, csvStream, ','))
+	while (getline(csvStream, data, ','))
 		cout << data << endl;
-*/
+
 
 	cout << CountLetters("arias", 'a') << endl;
 
 	return 0;
 }
-int CountLetters(string str, char c){ // counts how many time c appears in str
+int CountLetters(const string& str, char c){ // counts how many time c appears in str
 	int counter = 0;
 	for (size_t i=0; i<str.length(); i++)
 		if (str.at(i) == c)
