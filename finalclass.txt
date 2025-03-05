@@ -1,0 +1,5 @@
+do a files example inside the zybook
++++ a program with a menu that reads and writes from the file
+OR
+a program with a menu that calculates stuff from the file
+
